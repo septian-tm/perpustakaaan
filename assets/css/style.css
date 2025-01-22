@@ -1,0 +1,579 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    font-size: 18px;
+    background-color: white;
+    /* transition: all 1s ease; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 1;
+}
+
+.navbar .navbar-brand {
+    font-size: 24px;
+    color: #002147;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-item a {
+    color: #002147;
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu a {
+    color: black;
+}
+
+.navbar.sticky {
+    top: 0;
+}
+
+.navbar .navbar-nav .icon_kategori{
+    display: none;
+}
+
+.navbar .search-form{
+    margin: 0 auto;
+    position: relative;
+}
+.navbar .search-form .form-control{
+    width: 520px;
+    border-radius: 20px;
+}
+
+.user_show .showForm{
+    display: none;
+}
+
+.navbar .search-form .form-control:focus{
+    box-shadow: none;
+}
+.navbar .search-form button{
+    border: none;
+    background-color: transparent;
+    color: rgb(107, 107, 107);
+    font-size: 18px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    /* top: 0.9em;
+    left: 58.5em; */
+}
+
+.dropdown .dropdown-toggle {
+    color: #002147;
+    text-decoration: none;
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    left: -20px;
+}
+
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    padding: 90px 0;
+}
+
+section .content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    /* padding: 0 40px; */
+}
+
+.section-card{
+    margin-bottom: 40px;
+}
+.header-text{
+    display: flex;
+    justify-content: space-between;
+}
+.header-text h1{
+    font-size: 24px;
+}
+.header-text a{
+    text-decoration: none;
+    color: #002147;
+}
+
+/*============================================================ SECTION CARD ============================================================*/
+.card-home {
+    width: 220px;
+    height: 300px;
+    border-radius: 10px;
+
+    /* position: relative; */
+    overflow: hidden;
+    border: 1px solid #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-home img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+    filter: blur(0);
+
+}
+
+.card-home .card-body {
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    padding: 0 15px;
+    width: 100%;
+    transform: translateY(calc(100% - 80px));
+    transition: all .30s;
+    border-top-left-radius: 25px;
+}
+
+.card-home .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.card-home .label {
+    font-size: 12px;
+    position: relative;
+    top: -7px;
+}
+
+.card-home .card-body .card-text {
+    opacity: 0;
+    transition: opacity .5s;
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+
+.card-home:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid transparent;
+}
+
+.card-home:hover .card-body {
+    bottom: 20%;
+    background-color: rgb(228, 228, 228);
+    padding: 10px;
+    height: 100%;
+}
+
+.card-home:hover img {
+    filter: blur(1px);
+}
+
+.card-home:hover .label {
+    color: white;
+}
+
+.card-home:hover .card-text{
+    transition-delay: .15s;
+    opacity: 1;
+}
+.viewAll{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.deskripsi .deskripsis .read-more-link,
+.deskripsi .deskripsis .show-less-link {
+    text-decoration: none;
+}
+
+
+
+.section-detail{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px;
+}
+.card-detail{
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid rgb(218, 218, 218);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+}
+.card-detail img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.card-daftar{
+    margin: 0 auto;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #dcdde6;
+    padding: 15px;
+    border-radius: 20px;
+    width: 500px;
+}
+.input-box{
+    position: relative;
+    margin-top: 20px;
+}
+
+.input-box .form-label{
+    position: absolute;
+    left: 0.6rem;
+    top: 0.45rem;
+    padding: 0 0.5rem;
+    transition: all 200ms;
+    background-color: #ffffff;
+}
+.input-box #toggle-icon{
+    position: absolute;
+    right: 0.6rem;
+    top: 0.7rem;
+    padding: 0 0.5rem;
+}
+
+.form-control:focus{
+    outline: none;
+    box-shadow: none;
+}
+.form-control:focus ~ .form-label,
+.form-control:not(:placeholder-shown).form-control:not(:focus) ~ .form-label{
+    top: -0.60rem;
+    left: 0.8rem;
+    font-size: 14px;
+}
+
+
+/*=========================================================== page pinjam buku ===========================================================*/
+.alert-pinjam-buku{
+    margin: 0 auto;
+    width: 420px;
+}
+.listings-container {
+    margin: 0;
+    padding: 20px 0 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-pinjam-buku{
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card-pinjam-buku .img-thumbnail {
+    max-width: 50px;
+}
+.pinjam_buku .rak-position {
+    float: right;
+    margin-top: -15px
+}
+.card_pinjam_buku {
+    width: 450px;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.233) 0px 4px 0px;
+}
+
+
+.mobile-title {
+    margin-top: 15px;
+    padding: 0;
+    margin-left: 10px;
+    margin-bottom: 0;
+    color: #999;
+    font-size: 12px;
+}
+
+.sell,
+.statusTgl {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 3px dotted #ddd;
+    position: relative;
+}
+
+.sell::after,
+.statusTgl::after{
+    content:" ";
+    width: 20px;
+    height:12px;
+    position: absolute;
+    top: -7px;
+    right: -21px;
+    background-color: white;
+    border-top-left-radius: 15px; 
+    border-top-right-radius: 15px;
+    border: 1.8px solid rgb(216, 215, 215);
+    border-bottom: 0;
+    transform: rotate(-90deg);
+}
+.sell::before,
+.statusTgl::before{
+    content:" ";
+    width: 20px;
+    height:12px;
+    position: absolute;
+    top: -7px;
+    left: -21px;
+    background-color: white;
+    border-top-left-radius: 15px; 
+    border-top-right-radius: 15px;
+    border: 1.8px solid rgb(216, 215, 215);
+    border-bottom: 0;
+    transform: rotate(90deg);
+}
+
+
+.ref {
+    padding: 5px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    color: #999;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    border-bottom: 1.4px dashed #ddd;
+
+}
+
+.head {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    text-align: end;
+    gap: 10px;
+}
+.head-c .rak{
+    float: right;
+    font-size: 12px;
+    margin-top: -20px;
+}
+
+.title {
+    font-size: 12px;
+    width: 25%;
+}
+
+
+
+section .button-seeall {
+    position: relative;
+    left: 50%;
+    top: 15px;
+    transform: translate(-50%);
+    background-color: #002147;
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #002147;
+}
+
+footer .copyright {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+
+
+@media screen and (max-width: 767px){
+    .navbar .navbar-nav{
+        position: absolute;
+        right: 45px;
+        top: 15px;
+    }
+    .navbar .navbar-nav .dropdown-menu{
+        left: -140px;
+    }
+    .navbar .kategori_name {
+        display: none;
+    }
+    .navbar .navbar-nav .icon_kategori{
+        display: block;
+        mask-position: absolute;
+        left: 0;
+    }
+    .user_show .showForm {
+        display: block;
+    }
+
+    .search-form{ 
+        width: 100%;
+        display: none;
+    }
+    .search-form.active{
+        display: block;
+    }
+    .navbar .search-form .form-control{
+        position: absolute;
+        left: 0;
+        top: -2.5em;
+        width: 280px;
+    }
+    .navbar .search-form button{
+        position: absolute;
+        top: -2em;
+        right: 5.5em;
+    }
+
+    .navbar .user_show{
+        position: absolute;
+        right: 15px;
+        top: 20px;
+    }
+    
+
+    section .content,
+    .viewAll {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .card-home{
+        width: 100%;
+    }
+    .card-home .card-body {
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        padding: 10px 15px;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(228, 228, 228);
+    }
+    .card-home:hover .card-body {
+        bottom: 10%;
+        padding: 10px 15px;
+    }
+    .card-home .card-title {
+        font-size: 12px;
+    }
+
+    .card-home .card-text {
+        display: none;
+    }
+
+    .section-detail {
+        grid-template-columns: repeat(1, auto);
+    }
+    .card-detail{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* daftar/masuk area */
+    .card-daftar {
+        width: 100%;
+    }
+    /* pinjam buku area */
+    .card-pinjam-buku{
+        width: 100%;
+    }
+    .card-pinjam-buku .img-thumbnail{
+        max-width: 80px;
+    }
+    .pinjam_buku{
+        width: 100%;
+        padding: 15px;
+    }
+    .pinjam_buku .rak-position{
+        float: left;
+    }
+    .card_pinjam_buku{
+        width: 100%; 
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:1023px){
+    .navbar .navbar-nav {
+        position: absolute;
+        right: 45px;
+        top: 15px;
+    }
+    
+    .navbar .navbar-nav .dropdown-menu {
+        left: -140px;
+    }
+
+    .navbar .kategori_name {
+        display: none;
+    }
+
+    .navbar .navbar-nav .icon_kategori {
+        display: block;
+    }
+    /*  */
+    .search-form {
+        width: 100%;
+        display: none;
+    }
+    
+    .search-form.active {
+        display: block;
+    }
+    
+    .user_show .showForm {
+        display: block;
+    }
+    .navbar .search-form .form-control {
+        position: absolute;
+        left: 0;
+        top: -2.5em;
+        width: 640px;
+    }
+
+    .navbar .search-form button {
+        position: absolute;
+        top: -2em;
+        right: 3.4em;
+    }
+
+    .navbar .user_show {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+    }
+    /*  */
+    section .content,
+    .viewAll {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+
+    /* pinjam buku area */
+    .pinjam_buku {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .pinjam_buku .rak-position {
+        float: left;
+    }
+
+    .card_pinjam_buku {
+        width: 100%;
+    }
+}
