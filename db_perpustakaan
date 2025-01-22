@@ -1,0 +1,285 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jan 01, 2023 at 04:02 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_perpustakaan`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_buku`
+--
+
+CREATE TABLE `tb_buku` (
+  `id_buku` int(11) NOT NULL,
+  `judul_buku` varchar(255) DEFAULT NULL,
+  `kategori` int(11) DEFAULT NULL,
+  `penulis` varchar(255) DEFAULT NULL,
+  `penerbit` varchar(255) DEFAULT NULL,
+  `tahun_terbit` date DEFAULT NULL,
+  `jumlah_halaman` varchar(100) DEFAULT NULL,
+  `jumlah_buku` int(11) DEFAULT NULL,
+  `deskripsi` text DEFAULT NULL,
+  `rak_buku` varchar(20) DEFAULT NULL,
+  `cover` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `update_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tb_buku`
+--
+
+INSERT INTO `tb_buku` (`id_buku`, `judul_buku`, `kategori`, `penulis`, `penerbit`, `tahun_terbit`, `jumlah_halaman`, `jumlah_buku`, `deskripsi`, `rak_buku`, `cover`, `created_at`, `update_at`) VALUES
+(1, 'Buku Sakti Pemrograman Python : Untuk Mengelola, Menganalisis', 2, 'Adam Saputra, S.Si.', 'Anak Hebat Indonesia', '2022-12-05', '154', 10, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Merasa ketinggalan zaman karena tidak bisa Python? Atau merasa ketinggalan karena Python sekarang\r\n\r\ndigunakan di mana saja dan untuk kepentingan apa saja? Nah, Python ini dalam dunia profesional pengolahan dan pemaparan data sangatlah penting.\r\n\r\nApalagi untuk analisis data dan proyeksi ke depan (machine Learning). Saat ini, menjadi seorang analisis data yang andal sepertinya wajib dimulai dengan mempelajari pemrograman Python. Mengingat gaya pemrograman Python sangatlah fleksibel dan dapat disesuaikan dengan keinginan dan kebutuhan Anda. 2\r\n\r\n) Buku ini menyajikan secara komprehensif dan sistematis dalam mempelajari bahasa pemrograman Python dari nol. Anda akan belajar materi-materi, seperti sintaksis dasar dan tipe data dalam Python, operator dalam Python, List-tuple-setdictionary, Loops, Pandas, dan lain-lain. Menurut Tiobe Index (bulan Oktober 2022), Python adalah bahasa pemrograman nomor 1 yang paling populer di seluruh dunia. So, kamu wajib belajar Python sekarang juga!\r\nPython bukan hanya bahasa pemrograman tingkat tinggi untuk tujuan umum tetapi juga mudah dibaca. Dalam dunia profesional pengolahan dan pemaparan data sangatlah penting demi kesehatan suatu instansi maupun perusahaan. Saat ini, menjadi seorang analisis data yang andal dapat dimulai dengan mempelajari pemrograman python. Mengingat gaya pemrograman python sangatlah fleksibel dan dapat disesuaikan dengan keinginan dan kebutuhan Anda.\r\n\r\nBuku ini menyajikan secara komprehensif dan sistematis dalam mempelajari bahasa pemrograman python dari nol. Melalui buku ini, Anda akan belajar materi-materi, seperti sintaksis dasar dan tipe data dalam python , operator dalam python , list-tuple-set-dictionary, loops, pandas, dan lain-lain. Maka dari itu, mulailah belajar bahasa pemrograman python sekarang juga melalui buku ini sehingga Anda bisa lebih menguasai bahasa pemrograman ini secara cepat dan siap terjun untuk mengolah data secara lebih baik lagi.</span><br></p>', 'B3', '63aef196630d7.jpg', '2022-12-30 21:11:34', NULL),
+(2, 'Dasar-Dasar Graph Machine Learning', 2, 'Dr. Ir. Yaya Heryadi, M.Sc., Cds. ', 'Gava Media', '2022-10-31', '196', 5, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Data yang memiliki struktur graf semakin banyak tersedia di sekitar kita dan dihasilkan oleh berbagai sumber data. Data berstruktur graf yang terakumulasi dari sejumlah aplikasi media sosial setiap harinya memiliki volume sangat besar. Informasi hasil pengolahan data tersebut sangat berguna bagi pembuatan keputusan di berbagai bidang seperti: analisis dan penyusunan kebijakan publik, dan Customer Relationship Management. Namun demikian, untuk menganalisis data graf dibutuhkan metode yang tepat untuk menggali pola data yang \"tersembunyi\" di dalam himpunan data. Berbeda dari metode analisis statistik yang hanya menggunakan variabel objek, analisis data graf menggunakan variabel objek (vertex) dan variabel relasi antar objek (edges).\r\n\r\nMachine Learning merupakan sebuah cabang ilmu Kecerdasan Artifisial yang berfokus kepada pengembangan algoritma \"cerdas\" yang mampu mempelajari pola dari data yang terstruktur maupun tidak-terstruktur tanpa diprogram secara eksplisit. Menggunakan proses pembelajaran model bersifat iteratif, sebuah model Machine Learning dapat dipergunakan untuk menganalisis data berukuran sangat besar secara efisien sehingga dapat dimanfaatkan ke dalam sejumlah teknologi untuk membantu manusia menyelesaikan pekerjaan rutin yang semula dikerjakan secara manual, antara lain: mendeteksi objek di dalam citra, melakukan segmentasi citra, dan mendeteksi ujaran kebencian di dalam kalimat. yang\r\n\r\nNamun demikian, algoritma Machine Learning tidak dapat diaplikasikan langsung ke dalam data berstruktur graf disebabkan oleh beberapa hal antara lain: struktur data graf yang bersifat kompleks, tidak memiliki titik referensi, dan bersifat dinamis. Oleh karena itu, algoritma Machine Learning perlu diadaptasi agar dapat dipergunakan untuk menganalisis data graf. Publikasi yang ditulis oleh Gori, Monfar Dini, dan Scarselli (2005) mungkin menjadi salah satu titik awal berkembangnya Graph Machine Learning, sebuah cabang ilmu Kecerdasan Artifisial yang menggabungkan Machine Learning dan Teori Graf. Dengan menggunakan metode Graph Machine Learning, data graf dapat dianalisis pada beberapa level yaitu: (i) level vertex, misalnya: memprediksi kategori akun dari data sebuah jaringan media sosial; (ii) level edge, misalnya: memprediksi apakah seorang calon konsumen akan menyukai sebuah produk/layanan yang ditawarkan; dan (iii) level sub-graf atau graf, misalnya: memprediksi apakah sub-graf hasil pembelajaran seorang mahasiswa sampai semester tertentu memiliki kemiripan dengan dengan sub-graf hasil pembelajaran mahasiswa lain yang telah lulus dengan IPK tinggi atau mahasiswa dropout.</span><br></p>', 'B3', '63aef1de69f25.jpg', '2022-12-30 21:12:46', '2022-12-30 21:13:02'),
+(3, 'Level Comic: Bungo Stray Dogs 02', 4, 'Kafka Asafiri', 'Elex Media Komputindo', '2022-11-29', '204', 2, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Setelah melalui pertarungan sengit dengan Akutagawa, lalu siuman di ruang perawatan kantor Agensi Detektif Bersenjata, Atsushi Nakajima kabur karena merasa tidak boleh merepotkan agensi lebih dari ini. Namun, Mafia mengirimkan Ryuro Hirotsu dari Kelompok Petarung \"Kadal Hitam\" yang keji ke kantor agensi!? Tidak hanya itu, para pemilik kemampuan khusus dari Port Mafia pun berturut-turut menyerang, seperti Motojiro Kajii si pengebom dan Kyoka Izumi si gadis kecil berpakaian tradisional. Simak jilid 2 dari kisah aksi pertarungan antartokoh sastra pemilik kemampuan khusus ini!!\r\nSelling point:\r\n- Kisah action supernatural menarik yang terinspirasi dari sastrawan Jepang dan dunia. Para tokohnya diberi nama yang sama dengan sastrawan terkenal dan memiliki kemampuan yang berhubungan dengan karya mereka.\r\n- Telah terbit sebanyak 22 jilid.\r\n- Serial populer yang telah dicetak sebanyak 8,5 juta eksemplar.\r\n- Telah diadaptasi menjadi serial animasi sebanyak 3 musim di Jepang. Musim keempat sedang dalam produksi.\r\n- Telah diadaptasi menjadi novel, komik spin off, film animasi layar lebar, drama panggung, game, dan live action.</span><br></p>', 'A1', '63aef25e89ee8.jpg', '2022-12-30 21:14:54', NULL),
+(5, 'Siapa Bilang Grammar Sulit?', 1, 'Debbie Ratna Sari', 'Anak Hebat Indonesia', '2022-11-24', '192', 6, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Di era globalisasi seperti sekarang ini, memiliki kemampuan bahasa asing wajib dimiliki untuk bisa survive di tengah dunia yang penuh kompetisi. Bahasa Inggris merupakan salah satu bahasa internasional yang digunakan sebagai bahasa komunikasi antar negara. Oleh karenanya, jika tak mau ketinggalan, mau tak mau kitapun harus menguasai dan memahami bahasa ini. Maka, tak heran jika sekarang bahasa Inggris mulai diajarkan sejak tingkat Taman kanak-kanak hingga bangku kuliah. Bahkan, Bahasa Inggris juga telah menjadi salah satu syarat wajib yang harus kita miliki ketika melamar pekerjaan di suatu perusahaan atau instansi.\r\nSalah satu hal yang membedakan bahasa Inggris dengan bahasa\r\nkita adalah karena bahasa Inggris memiliki tenses. Bagi sebagian orang, tenses\r\nmenjadi momok karena di bahasa Indonesia, kita terbiasa berbicara atau menulis\r\ntanpa adanya pola penyusunan kata-kata berdasarkan waktu terjadinya peristiwa\r\ntersebut. Selain itu, juga karena adanya perubahan bentuk\r\nkata kerja. Jika waktu kejadian peristiwa berubah, maka kata kerjanya pun berubah.\r\n\r\nHal ini mendorong penulis untuk menyajikan cara yang\r\nsederhana dan mudah bagi pembaca untuk memahami tenses dalam bahasa Inggris.\r\nUntuk menguji pemahaman kita tentang bahasan-bahasan yang sudah dipelajari,\r\npembaca akan diajak untuk mempraktikkan bahasan tersebut melalui latihan soal.\r\nSelain membahas mengenai tenses, buku ini juga menyajikan\r\npengetahuan-pengetahuan dasar yang penting diketahui pembaca untuk menunjang\r\npemahaman terhadap bahasa Inggris. Penulis berharap, buku ini dapat membantu\r\npembaca dalam memahami dan mempelajari bahasa Inggris. Sehingga, tak ada lagi\r\nalasan bahasa Inggris akan menjadi hambatan bagi masa depan pembaca.\r\nGood Luck!</span><br></p>', 'A2', '63aef2b2af983.jpg', '2022-12-30 21:16:18', NULL),
+(6, 'Islam, Otoritarianisme, Dan Ketertinggalan', 3, 'Ahmet T.Kuru', 'Kepustakaan Populer Gramedia', '2022-12-29', '504', 4, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Mengapa negara-negara berpenduduk mayoritas Muslim menunjukkan tingkat otoritarianisme yang tinggi dan tingkat pembangunan sosioekonomi yang rendah dibandingkan dengan rata-rata dunia? Ahmet T. Kuru mengkritik penjelasan-penjelasan yang menunjuk agama Islam sebagai penyebab perbedaan itu, karena dalam bidang filsafat dan sosioekonomi, dunia Muslim sempat lebih maju daripada Eropa Barat antara abad ke-9 dan ke-12 Masehi.\r\n\r\nKolonialisme Barat juga bukan penyebabnya: dunia Muslim sudah menderita masalah politik dan sosioekonomi ketika kolonisasi bermula. Kuru menunjukkan bahwa dunia Muslim sudah memiliki pemikir-pemikir dan pedagang-pedagang berpengaruh pada awal sejarahnya, ketika ortodoksi agama dan kekuasaan militer masih marak di Eropa. Namun, pada abad ke-11, persekutuan antara ulama ortodoks Islam dan negara-negara militer mulai bermunculan.\r\n\r\nPersekutuan itu sedikit demi sedikit menghalangi kreativitas intelektual dan ekonomi dengan meminggirkan kelas intelektual dan borjuis di dunia Muslim. Studi penting ini menghubungkan penjelasan sejarah dengan politik masa kini dengan memperlihatkan bahwa sampai sekarang, aliansi ulama-negara tetap mempersulit kreativitas dan kompetisi di negara-negara Muslim. Ahmet T. Kuru ialah guru besar ilmu politik dan direktur Center for Islamic and Arabic Studies di San Diego University.\r\n\r\nDia penulis Secularism and State Policies toward Religion: The United States, France, and Turkey (Cambridge 2009) yang meraih perhargaan dan editor (dengan Alfred Stepan) Democracy, Islam, and Secularism in Turkey (2012). Karya-karyanya sudah diterjemahkan ke bahasa Arab, Bosnia, Persia, Prancis, Tiongkok, dan Turki. Buku ini (berjudul asli /Islam, Authoritarianism, and Underdevelopment: A Global and Historical Comparison)/ merupakan satu dari dua pemenang International History and Politics Award dari American Political Science Association.</span><br></p>', 'C1', '63aef341cce73.jpg', '2022-12-30 21:18:41', NULL),
+(7, 'Haikyu!!: Fly High! Volleyball! 31', 4, 'Harauichi Furudate', 'm&c!', '2022-12-28', '192', 5, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Seorang siswa SMA bernama Shōyō Hinata, menjadi terobsesi dengan bola voli setelah menyaksikan SMA Karasuno memenangkan pertandingan mereka untuk lolos ke Kejuaraan Nasional di TV. Meskipun memiliki tubuh yang pendek, Hinata terinspirasi oleh seorang pemain yang dijuluki \"Raksasa Kecil\", pemain spiker sayap Karasuno bertubuh pendek, tetapi berbakat. Meskipun tidak berpengalaman, Hinata memiliki tubuh atletis dan memiliki lompatan vertikal yang mengesankan. Ia sempat bergabung dengan klub voli di sekolahnya, tetapi dia adalah satu-satunya anggota di klub tersebut, memaksanya menghabiskan dua tahun ke depan untuk mencoba meyakinkan siswa lain untuk membantunya berlatih.\r\n\r\nSaat dirinya duduk di bangku kelas 3 sekaligus tahun terakhirnya di SMP, beberapa teman Hinata setuju untuk bergabung dengan klub sehingga mereka bisa berpartisipasi dalam turnamen. Dalam pertandingan resmi pertamanya, mereka menderita kekalahan telak dari tim yang difavoritkan untuk memenangkan turnamen. Tim tersebut dihuni oleh siswa SMP kelas 3 bernama Tobio Kageyama, seorang pemain setter ajaib yang dijuluki \"Raja Lapangan\" karena keterampilan dan gaya bermain tiraninya. Keduanya sempat terlibat persaingan singkat, dan setelah pertandingan, Hinata bersumpah untuk mengalahkan Kageyama saat mereka SMA.\r\n\r\nHinata belajar dan diterima di Karasuno, SMA yang sama dengan Raksasa Kecil, tetapi terkejut mengetahui bahwa Kageyama juga memilih untuk bersekolah di Karasuno. Terungkap bahwa Karasuno telah kehilangan reputasinya sebagai sekolah unggulan setelah era Raksasa Kecil. Karasuno kemudian sering dijuluki sebagai \"Gagak yang Tidak Bisa Terbang\" oleh tim lokal lainnya. Namun, dengan menggabungkan keterampilan umpan Kageyama yang jenius dengan keatletisan Hinata yang luar biasa, keduanya menciptakan taktik bola voli baru yang eksplosif dan mengembangkan kemitraan setter-spiker yang kuat dan tak terduga.\r\n\r\nSepanjang pertandingan yang mereka lalui, Hinata dan Kageyama saling mendorong untuk mencapai potensi penuh mereka. Hinata juga mengembangkan hubungan yang dekat dengan rekan setim intinya, sehingga dimulailah perjalanan penebusan Karasuno untuk memulihkan reputasi mereka dan lolos ke Kejuaraan Nasional.</span><br></p>', 'A1', '63aef3fe1a0a1.jpg', '2022-12-30 21:21:50', NULL),
+(8, 'Tokyo Ghoul 01', 4, 'Sui Ishida', 'm&c!', '2022-12-23', '224', 4, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Di antara jenis buku lainnya, komik memang disukai oleh semua kalangan mulai dari anak kecil hingga orang dewasa. Alasan komik lebih disukai oleh banyak orang karena disajikan dengan penuh dengan gambar dan cerita yang mengasyikan sehingga mampu menghilangkan rasa bosan di kala waktu senggang.\r\n\r\nKomik seringkali dijadikan sebagai koleksi dan diburu oleh penggemarnya karena serinya yang cukup terkenal dan kepopulerannya terus berlanjut sampai saat ini. Dalam memilih jenis komik, ada baiknya perhatikan terlebih dahulu ringkasan cerita komik di sampul bagian belakang sehingga sesuai dengan preferensi pribadi pembaca.\r\n\r\nM&amp;C! Publishing adalah penerbit di bawah Divisi Ritel dan Penerbitan Grup Kompas Gramedia, perusahaan penerbitan terbesar di Indonesia. Grup Kompas Gramedia memulai usaha dengan fokus di media cetak. Dalam perkembangannya, perusahaan telah berkembang menjadi kelompok usaha dengan berbagai divisi. Di bidang informasi, grup ini juga merambah ke media elektronik dan multimedia. M&amp;C! Penerbitan telah menerbitkan berbagai judul dan jenis buku: komik, komik pendidikan, buku anak-anak, novel, buku nonfiksi. Salah Satunya seperti komik ”Tokyo Ghoul 01”.\r\n\r\nSinopsis Buku:\r\nDi kota ini, ada sebentuk \"keputusasaan\" yang menyelusup… Monster yang membaur dalam keramaian, memburu manusia dan memakan dagingnya… Manusia menyebutnya \"ghoul\". Seorang pemuda tak sengaja bertemu monster… Saat itulah, roda nasib yang aneh mulai berputar...!</span><br></p>', 'A1', '63aef459e3d6e.jpg', '2022-12-30 21:23:21', NULL),
+(9, 'Dragon Ball Super Vol. 15', 4, 'Akita Toriyama', 'Elex Media Komputindo', '2022-10-08', '192', 8, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Goku berhasil menyudutkan Moro dengan ultra instinct yang telah disempurnakan. Namun, Moro juga mendapatkan ultra instinct dari kemampuan Merus yang tersimpan di tangan kirinya yang sudah putus. Bagaimanakah nasib Koku di hadapan kekuatan dewa tersebut!?</span><br></p>', 'A1', '63aef4b090783.jpg', '2022-12-30 21:24:48', NULL),
+(10, 'Metodologi Penelitian Bahasa Rupa', 1, 'Riza Istanto', 'Thafa Media', '2022-11-21', '244', 3, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Banyak dari para peneliti bahasa rupa berpegang pada satu buku yang ditulis oleh Tabrani. Buku berjudul \"Bahasa Rupa\" merupakan kumpulan tulisan Tabrani dari sejumlah makalah ilmiah, oleh karena itu cukup sulit untuk diikuti sebagai satu acuan penelitian. Dari sini dapat dibayangkan betapa sulitnya mengembangkan buku ini, karena-Nya syukur alhamdulillahirabbilallamin saya panjatkan kepada Allah SWT serta doa salawat kepada Nabiyullah Muhammad SAW.\r\n\r\nLebih kepada panggilan hati buku ini ditulis hingga akhirnya sampai di tangan para pembaca yang budiman. Barangkali ini satu tanggung jawab yang dapat saya wujudkan, mengingat saya sempat melakukan penelitian bahasa rupa dan tidak ada buku panduan yang memadai selain buku yang ditulis oleh Tabrani, padahal penelitian demi penelitian telah banyak dilakukan. Hal tersebut menjadi pemantik saya untuk membuat buku ini.\r\n\r\nSalah satu yang menarik dari temuan Tabrani ialah Ruang Waktu Datar (RWD), sebuah adaptasi dari teori fisika modern Einstein yang kerap dikutip pada tulisan-tulisannya. Disebutkan bahwa setiap benda atau objek yang ada di dunia ini memiliki ruang dan waktunya masing-masing, ruang dan waktu pada masing-masing objek tidak sama persis antara satu dengan lainnya, objek-objek tersebut dapat bersamasama dalam satu tema.\r\n\r\nRWD menjadi indikator Tabrani untuk menemukan satu cara bercerita dari gambar-gambar yang selama ini terbenam. Penggalian demi penggalian telah banyak dilakukan Tabrani. Bandingannya dengan cara modern Naturalis Momen Opname (NPM) yang selama ini mendominasi cara baca gambar bercerita, membuka jalan bagi tersingkapnya beragam kemungkinan gambar-gambar bercerita. Namun demikian, penggalian yang dilakukan Tabrani belum begitu dalam, perlu tekat dan usaha yang kuat untuk menepis bongkahanbongkahan batu yang menghalangi jalan untuk mencapai dasar yang dalam, oleh karena itu, harapan saya, hadirnya buku ini akan membantu jalan tersebut.\r\n\r\nPemahaman saya tentang teori bahasa rupa diperoleh atas jasa Drs. Aryo Sunaryo, M.Pd. dan Drs. Dwi Budi Harto, M.Sn. Beliau berdua telah membuka tirai-tirai kebodohan dalam diri saya hingga memicu terciptanya buku ini. Sebagai bentuk taʼdzim seorang murid terhadap guru, saya merasa bersyukur karena telah berkenan memberikan pengantar bagi buku ini sehingga jalan saya menjadi semakin terarah. Saya sampaikan terimakasih yang sebesar-besarnya semoga kesehatan dan keberkahan Allah selalu menyertai bapak berdua beserta keluarga.\r\n\r\nTerimakasih saya sampaikan kepada guru saya Prof. Dr. Tjetjep Rohendi Rohidi, M.A. yang telah berkenan memberikan sebait kata berharga pada buku ini. Tidak lupa kepada kakak tercinta Arisianto yang telah menjadi teman diskusi selama ini, serta Dr. Sunarto guru yang banyak mengajarkan dan memotivasi saya untuk menulis. Terimakasih yang tak terhingga kepada orang tua saya Ibu Suyati dan Bapak Somadiyono yang selalu memberikan doa dan restu kepada penulis, sehingga mempermudah jalan saya selama ini. Terimakasih juga kepada seluruh pihak yang terlibat dalam penerbitan buku ini yang tidak dapat saya sebutkan satupersatu.\r\n\r\nUraian di dalam buku ini dibuat ringkas dan runtut agar mudah dipahami. Secara runtut buku ini disusun ke dalam\r\n\r\nempat bab utama dengan sejumlah sub bahasan pada masingmasing babnya. Bab pertama mengenai teori bahasa rupa, di dalamnya termuat konsep-konsep tentang bahasa rupa; bab kedua menyoal mengenai sejumlah kata kunci yang digunakan dalam teori bahasa rupa; bab ketiga membahas mengenai kerangka penelitian bahasa rupa; bab terakhir membahas mengenai bahasa rupa untuk membaca sejumlah karya seni rupa.\r\n\r\nHarapan saya, semoga buku ini dapat memberi manfaat bagi semua yang membacanya. Sebagai manusia saya menyadari bahwa buku ini jauh dari kesempurnaan, untuk itu tegur sapa dari para pembaca yang budiman sangat diharapkan. Tidak lupa, kepada penerbit saya sampaikan terimakasih atas kesediaannya menerbitkan buku ini.\r\nSelamat membaca.</span><br></p>', 'A2', '63aef53ace0da.jpg', '2022-12-30 21:27:06', NULL),
+(11, 'SEO Pamungkas', 2, 'Su Rahman', 'Elex Media Komputindo', '2022-07-02', '408', 4, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">SEO adalah singkatan dari \"search engine optimization\" (pengoptimalan mesin telusur) atau \"search engine optimizer\". Secara definitif, SEO pada dasarnya adalah upaya-upaya teknis untuk meningkatkan visibilitas serta peringkat website dari sistem mesin pencarian. SEO melibatkan beberapa proses algoritma yang memungkinkan mesin pencari mendeteksi informasi rujukan ter komprehensif dan terpercaya untuk diposisikan pada peringkat-peringkat atas.\r\n\r\nMesin pencari di internet tidak hanya Google. Terdapat banyak mesin pencari lainnya yang juga digunakan pengguna internet, seperti Yahoo! dan Bing. Tidak heran kalau ada beberapa metode efektif untuk memastikan website yang kamu kelola pada peringkat yang baik. SEO jadi solusi yang banyak dipelajari oleh mereka yang juga berkecimpung di bidang ini untuk memastikan konten website yang dibuat memiliki elemen SEO yang optimal.\r\n\r\nSEO memiliki beberapa fungsi utama, termasuk meningkatkan peringkat website, memastikan website yang kamu kelola selalu berada pada indeks mesin pencari, dan selalu ditampilkan di halaman utama begitu tombol enter ditekan. Fungsi lainnya jelas meningkatkan jumlah kunjungan ke website yang dikelola melalui pencarian di internet. Semakin banyak orang mengklik alamat URL ke website tersebut, akan berpengaruh ke banyak hal. Ditambah lagi, bagi website dengan produk jual, SEO dapat membantu meningkatkan angka penjualan sekaligus menekan biaya pemasaran yang jauh lebih besar.\r\n\r\nBagi Anda yang ingin mengetahui tentang SEO secara lengkap, buku “SEO Pamungkas” akan membantu Anda menjelaskan apa itu SEO dan bagaimana cara penggunaannya.\r\n\r\nSinopsis\r\nMemiliki website adalah langkah awal. Langkah selanjutnya adalah mengoptimalkan website tersebut agar bisa dengan mudah ditemukan melalui mesin pencari Google. SEO adalah teknik yang harus dikuasai oleh pemilik website dan pelaku usaha online, karena jika website bisnis Anda tidak bisa ditemukan melalui mesin pencari Google maka Anda akan kehilangan peluang untuk mendapatkan pelanggan baru. Buku ini menjabarkan langkah demi langkah cara melakukan optimalisasi website, agar website bisa lebih mudah ditemukan melalui pencarian Google.</span><br></p>', 'A2', '63aef5c566376.jpg', '2022-12-30 21:29:25', NULL),
+(12, 'Asal Usul Nama Tempat di Jakarta', 3, 'Rachmat Ruchiat', 'Komunitas Bambu', '2018-04-02', '260', 5, '<p><div style=\"box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(0, 96, 174); font-family: &quot;Times New Roman&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"></div></p><div class=\"product-desc\" id=\"section-desc\" style=\"box-sizing: border-box; margin: 0px; padding: 0px; font-family: Nunito, serif; font-size: 14px; line-height: 24px; color: rgb(21, 21, 21); white-space: pre-line; overflow-wrap: break-word; text-align: justify; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-size-adjust: none;\"><div class=\"ng-star-inserted\" style=\"box-sizing: border-box; margin: 0px; padding: 0px;\">Saat melihat dan mendengar nama-nama di daerah di wilayah Jakarta pastinya ada hal yang terbesit di pikiran Anda mengenai asal usul penamaan daerah tersebut. Siapa bilang nama Luar Batang berasal dari peristiwa ajaib Habib sakti yang keluar dari kurung batang saat digotong ke pemakaman? Kata siapa nama Pluit berasal dari peluit atau roti seperti yang sering disebut-sebut? Apa betul Bidara Cina itu berasal dari banjir darah pembantaian orang-orang Cina yang terlibat pemberontakan Cina 1740? Benarkah Jatinegara itu kampung leluhur orang Betawi? Mengapa ada kampung dengan nama Japad, Tiang Bendera. Lantas mengapa ada Kampung Ambon, Kampung Bugis, Kampung Bali, Kampung Jawa, Kampung Bandan? Temukan semua jawabannya dalam buku ini dan puluhan lagi sejarah asal-usul nama tempat lainnya di Jakarta.\r\n\r\nBerbekal kekayaan sumber, tetapi dalam format ringkas dan populer, Rachmat Ruchiyat sebagai pengamat sejarah Jakarta akhirnya bukan sekadar menyajikan asal usul nama-nama tempat di Jakarta, lebih jauh lagi memberikan gambaran mengenai perkembangan sejarah Jakarta sebagai kota yang kaya oleh keragaman budaya dan jejak sejarah. Penelusurannya secara kronologis mulai abad ke-15 sampai abad ke-20, tidak hanya memperlihatkan perubahan geografi dan demografi Jakarta, melainkan juga perubahan sosial, budaya, politik dan ekonomi. Deskripsi dan analisa sejarah semakin dikuatkan dengan sejumlah gambar dan peta kuno yang ada dalam buku ini.</div></div>', 'B1', '63aef62e817f2.jpg', '2022-12-30 21:31:10', NULL),
+(13, 'Pencahayaan Buatan Dalam Arsitektur', 1, 'Ir. E. B. Handoko Sutanto, M.T.', 'Pt Kanisius', '2017-12-03', '320', 4, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Desain pencahayaan buatan dalam arsitektur adalah unsur penunjang dan pelengkap yang sangat penting untuk mendukung penampilan dari objek arsitektur. Dengan kontribusi pencahayaan buatan yang terencana, maka sebuah ruang bangunan, atau lingkungan, dapat diposisikan dengan daya guna yang lebih kuat, sehingga penampilannya menjadi lebih memiliki daya tarik, lebih berarti serta lebih dihargai. Bagi sebuah objek arsitektur, upaya pencapaian terhadap kuantitas cahaya adalah unsur yang paling penting. Kuantitas cahaya tersebut harus memenuhi persyaratan untuk beraktivitas agar suatu tugas visual dapat berlangsung dengan baik, lancar dan aman. Kuantitas cahaya (baik secara alami maupun buatan) yang memenuhi syarat secara mutlak harus terakomodasi, agar ruang/bangunan di lingkungan tersebut dapat berfungsi dengan baik untuk menampung segala aktivitas yang sedang dilakukan oleh para penghuni/penggunanya. Ruangan/bangunan atau lingkungan yang menjadi bagian dari objek arsitektur tersebut baru dapat diberdayagunakan secara optimal oleh kehadiran cahaya sehingga penggunanya dapat memfungsikan, mendefinisikan bentuk dan rupa objek dengan sebaik~baiknya.\r\nBuku ini berisi tentang pendalaman teori tentang pencahayaan buatan bagi objek-objek arsitektural. Cahaya buatan sangat diperlukan untuk menunjang eksistensi bentuk dan fungsi dari sebuah objek arsitektur. Tanpa kehadiran pencahayaan buatan pada malam hari, maka objek arsitektur tersebut tidak dapat berfungsi dan tidak memiliki makna.</span><br></p>', 'C1', '63aef6a5366b6.jpg', '2022-12-30 21:33:09', NULL),
+(14, 'Strategi Efektif Internet Marketing', 2, 'Arista Prasetyo Adi', 'Elex Media Komputindo', '2022-06-19', '192', 6, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Seiring dengan majunya teknologi, tren dalam dunia bisnis kian bervariasi. Salah satunya ialah digital marketing atau pemasaran secara digital. Dengan menggunakan perangkat elektronik atau internet yang menggunakan beragam trik marketing serta media digital. Dengan demikian, anda dapat berkomunikasi dengan calon konsumen secara online. Terdapat beragam akses untuk para calon konsumen agar dapat melihat penawaran produk anda. Seperti media sosial, blog, website, dan lain sebagainya. Dengan akses inilah para konsumen dapat berkomunikasi dengan anda untuk menanyakan perihal produk yang anda tawarkan.\r\n\r\nDigital marketing merupakan salah satu strategi pemasaran guna mempromosikan produk dengan menggunakan media digital. Strategi ini dapat menjangkau konsumen secara lebih relevan, tepat waktu, dan lebih pribadi. Banyak teknik yang dapat dipraktekkan dalam menjalankan digital marketing. Dengan adanya konsep serta penerapan digital marketing, diharapkan dapat mendongkrak penjualan produk atau brand. Oleh karena itu, bagi para pengusaha yang menginginkan produk yang ditawarkannya dapat laku di pasaran, maka perlu mengetahui apa saja strategi digital marketing secara lebih rinci.\r\n\r\nBuku “Strategi Efektif Internet Marketing” akan membantu Anda dalam mengetahui apa saja strategi digital marketing secara lebih rinci. Buku ini memberikan strategi yang efektif dalam internet marketing atau digital marketing.\r\n\r\nSinopsis\r\nPemasaran di dunia maya tidak bisa dipandang sebelah mata. Jangkauan pengguna internet dan media sosial membuat peluang pemasaran di dunia maya banyak dilirik oleh para usahawan, baik skala kecil, menengah, maupun perusahaan besar. Media sosial, khususnya Instagram dan mesin pencari Google menjadi layanan internet yang paling banyak digunakan saat ini. Untuk meraih sukses dalam internet marketing diperlukan strategi khusus dan pengetahuan yang baik dalam mengoptimalkan media sosial. Di dalam buku ini dibahas berbagai macam teknik dari dasar hingga mahir yang berkaitan dengan internet marketing, khususnya melalui media sosial Instagram dan pemanfaatan mesin pencari Google. Buku ini cocok bagi Anda yang belum pernah sama sekali mengenal internet marketing maupun Anda yang sudah menjalankannya. Pembahasan dalam buku mencakup:\r\n• Dasar-dasar internet marketing\r\n• Manajemen sosial media\r\n• Menggunakan FB dan IG Ads\r\n• Teknik SEO\r\n• Menggunakan Google Ads.</span><br></p>', 'A2', '63aef6f6291b9.jpg', '2022-12-30 21:34:30', NULL),
+(15, 'HTML, PHP, dan MySQL untuk Pemula', 2, 'Gregorius Agung P, Jubilee Enterprise', 'Elex Media Komputindo', '2018-11-18', '204', 14, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Website kekinian yang fungsional dibentuk minimal menggunakan tiga pemrograman dasar, yaitu HTML, PHP, dan MySQL. Untuk mendesain layout dan bentuk website, digunakan HTML, sedangkan untuk membuat website dengan konten yang dinamis dan interaktif, Anda membutuhkan PHP. Jika ingin agar website itu dapat menyimpan data, Anda membutuhkan MySQL.\r\n\r\nBuku ini bebas jargon teknis yang sulit sehingga cocok dibaca para pemula dan orang awam. Untuk kepentingan belajar dari nol, buku ini cocok dimiliki sebab dalam sekali waktu, Anda bisa mempelajari tiga pemrograman sekaligus.\r\n\r\nDiharapkan, sebuah website yang berfungsi dengan baik bisa dibuat dengan memanfaatkan HTML, PHP, dan MySQL. Tool apa saja yang dibutuhkan untuk mempelajari buku ini telah tersedia dan dapat dimiliki secara gratis. Dengan demikian, tak ada halangan untuk dapat mempelajari seluruh materi yang dibahas.\r\n\r\nSemoga buku ini bisa membantu Anda menjadi seorang web developer yang andal.</span><br></p>', 'A2', '63aef747928db.jpg', '2022-12-30 21:35:51', NULL),
+(16, 'Sastra Humanitas: Konsep dan Praktik Pemaknaan', 1, 'Suwanrdi Endraswara', 'Morfalingua', '2017-10-02', '204', 12, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Sastra merupakan kata serapan dari bahasa Sanskerta yaitu shaastra, yang berarti \"teks yang mengandung instruksi\" atau \"pedoman\". Shaastra berasal dari kata dasar śās- atau shaas- yang berarti mengarahkan, mengajar, memberi petunjuk atau instruksi, dan tra yang berarti alat atau sarana. Adapun Humanis Menurut KBBI, yaitu orang yang mendambakan dan memperjuangkan terwujudnya pergaulan hidup yang lebih baik, berdasarkan asas perikemanusiaan atau pengabdi kepentingan sesama umat manusia.\r\nBuku ini merupakan kumpulan artikel yang mengkaji sastra humanitas. Fokus utama sastra adalah untuk kemuliaan manusia. Manusia memiliki dimensi unik dalam sastra. Ada manusia yang mudah melawan, putus harapan, tidak tahu perjuangan orang lain, egois dalam bertindak dan cenderung apatis dalam berbudaya. Ada manusia penuh pura-pura, berbunga-bunga, ketika ingin mendapatkan sesuatu, seolah-olah orang lain itu pujaan, tidak ada salah, penuh dengan lentikan emosi. Ada manusia pendengki, yang suatu saat dapat mengancam diri orang lain. Humanitas manusia seringkali memunculkan konflik dan perselisihan, sehingga karya sastra menjadi semakin seru. Dalam buku ini akan membahas lebih lanjut tentang konsep dari sastra humanitas dan proses praktik pemaknaannya sehingga pembaca dapat memahami dengan baik apa yang dimaksud dengan konsep sastra yang humanis serta dapat mempraktikkan pemaknaannya.</span><br></p>', 'B3', '63aef7bb09388.jpg', '2022-12-30 21:37:47', NULL),
+(17, 'Kitab Hacker', 2, 'Dedik Kurniawan', 'Elex Media Komputindo', '2019-04-18', '280', 8, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Anda bercita-cita menjadi hacker handal? Kabar gembira untuk Anda karena buku ini dapat mewujudkan cita-cita Anda tersebut. Sungguh tujuan buku ini ditulis bukan untuk mengajari Anda menjadi seorang pencuri data atau pembobol sistem orang lain. Buku ini memiliki tujuan yang mulia, yaitu membantu Anda memahami ilmu hacking agar Anda tidak menjadi korban retas dari orang-orang yang tidak bertanggung jawab. Dengan mempelajari buku ini, Anda akan mengerti berbagai teknik hacking yang biasanya digunakan para hacker. Berikut ini beberapa ilmu hacking yang dibahas:</span></p><p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\"> • mengendalikan perangkat komputer lain;\r\n</span><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line; background-color: var(--bs-card-bg); font-weight: var(--bs-body-font-weight);\">• memperbaiki hard disk yang rusak;\r\n</span><span style=\"background-color: var(--bs-card-bg); font-weight: var(--bs-body-font-weight); color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">&nbsp;</span><span style=\"font-weight: var(--bs-body-font-weight); color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line; background-color: var(--bs-card-bg);\">• mencari data yang hilang atau tersembunyi;\r\n</span><span style=\"background-color: var(--bs-card-bg); color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; font-weight: var(--bs-body-font-weight); text-align: justify; white-space: pre-line;\">• teknik menangkal serangan hacking. Tentunya, masih banyak lagi teknik hacking yang dibahas di dalam buku ini. Semoga buku ini bermanfaat untuk Anda dan gunakanlah secara ilmunya secara bijaksana.</span></p>', 'A2', '63aef817e95be.jpg', '2022-12-30 21:39:19', NULL),
+(18, 'The Silver Linings Playbook', 4, 'Matthew Quick', 'Kepustakaan Populer Gramedia', '2020-12-01', '368', 9, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">\"Kehidupan memang berat, Pat, dan anak-anak mesti diajari betapa beratnya kehidupan itu.”\r\n\r\n\"Kenapa?\"\r\n\r\n\"Agar mereka mau bersimpati kepada orang lain. Agar mereka memahami bahwa sebagian orang mengalami kesulitan lebih daripada mereka, dan bahwa perjalanan hidup di dunia ini bisa jadi luar biasa berbeda, tergantung reaksi kimiawi apa yang menggila di benak tiap orang.\"\r\n\r\nPat Peoples meyakini bahwa hidup adalah sebuah film yang bakal berakhir bahagia, makanya dia tidak menyia-nyiakan kesempatan ketika diizinkan meninggalkan rumah sakit jiwa tempatnya dirawat. Pat sudah berolahraga keras untuk menjaga badannya, berusaha untuk menjadi sosok yang lebih peka, bahkan membaca buku-buku sastra—semua dilakukan agar dia bisa segera rujuk dengan istrinya, Nikki. Pat sudah berubah, jadi seharusnya Nikki juga akan segera kembali ke pelukannya dan mereka berdua hidup bahagia selama-lamanya. Ya, kan?\r\n\r\nTapi kenapa masalah justru semakin bertambah? Dad ternyata terganggu dengan kehadiran putranya yang sinting di rumah, Mom sepertinya menyembunyikan rahasia besar dari Pat, dan Kenny G—ya, sang saksofonis itu—bahkan menghantui hari-harinya. Yang paling merepotkan adalah Tiffany. Kenapa perempuan itu selalu membuntuti ke mana pun Pat pergi? Novel debut yang menggabungkan cerita cinta, dinamika keluarga, kehidupan penggemar olahraga, dan masalah kesehatan mental ini sudah difilmkan dan meraih nominasi Oscar.\r\n\r\nLewat The Silver Linings Playbook, Matthew Quick mengajak kita memasuki isi kepala Pat, melihat caranya memandang dunia lewat sudut pandang yang janggal tapi menawan.\r\n\r\n\"Hangat, menggugah, menghibur, sekaligus jujur.\"\r\n—Justin Cronin</span><br></p>', 'A1', '63aef8b91e7b1.jpg', '2022-12-30 21:42:01', NULL),
+(19, 'Jejak Di Benak', 4, 'Faradita', 'm&c!', '2021-01-19', '132', 4, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Cerita dalam novel ini mengandung materi yang diperuntukkan untuk pembaca remaja mulai dari 13 tahun keatas. Tidak dianjurkan untuk dibaca anak-anak di bawah umur 13 tahun, dikhawatirkan adanya alur yang tidak sesuai untuk para pembaca dibawa 13 tahun. Novel ini banyak dicari dan dibaca oleh kalangan remaja perempuan, namun tidak menutup kemungkinan bahwa remaja laki-laki dan orang dewasa juga akan menyukai novel ini.\r\n\r\nNovel yang berjudul Jejak Di Benak karya Faradita ini ditulis dengan menggunakan kosakata yang ringan sehingga para pembaca dapat mudah memahami isi dan alur pada cerita ini. Selain itu cerita ini ditulis dengan alur yang santai sehingga para pembaca dapat menikmati cerita diwaktu kapan saja. Dengan alur yang dibuat menarik dapat membuat para pembaca penasaran bagaimana akhir dari kisah yang ada di dalam novel ini. Diharapkan dengan adanya novel ini pembaca bisa menghabiskan waktu luangnya dengan kegiatan yang menyenangkan.\r\n\r\nSinopsis\r\nBagaimana rasanya tentang mengagumi dalam diam, mencintai tanpa berani mengungkapkan, berdiri begitu dekat namun ucap tak pernah berhasil mengalahkan ketakutan? Kamu tidak sendirian, Aku akan mendengarkan.</span><br></p>', 'A1', '63aef91c693ab.jpg', '2022-12-30 21:43:40', NULL),
+(20, 'Kitab MS Office 2021', 2, 'Jubilee Enterprise', 'Elex Media Komputindo', '2022-05-21', '424', 6, '<p><span style=\"color: rgb(21, 21, 21); font-family: Nunito, serif; font-size: 14px; text-align: justify; white-space: pre-line;\">Microsoft Office adalah perangkat lunak paket aplikasi perkantoran buatan Microsoft dan dirancang untuk dijalankan di bawah sistem operasi Microsoft Windows dan Mac OS X. Umumnya Microsoft Office ini digunakan sebagai alat untuk mempermudah aktivitas dalam perkantoran. Hal tersebut 	idak dapat dipungkiri, mengingat pada awalnya Microsoft mengembangkan Office ini untuk tujuan perkantoran.\r\n\r\nDisisi lain banyak masyarakat yang menggunakan Microsoft Office untuk keperluan lain. Misalnya dalam bidang pendidikan, Microsoft Office sangat berguna dalam mengolah dan menghasilkan berbagai data yang difokuskan. Seperti membuat surat, menyimpan data penting, membuat slide presentasi, mengirim email, serta melakukan video call.\r\n\r\nBagi Anda yang ingin mempelajari microsoft office, buku “Kitab MS Office 2021” akan membantu Anda memahami microsoft office secara lengkap.\r\n\r\nSinopsis\r\nMS Office 2021 merupakan aplikasi penting untuk menyelesaikan berbagai macam tugas dan pekerjaan. Tidak memandang apakah Anda adalah seorang pelajar, mahasiswa, guru, dosen, pengusaha, pegawai, atau CEO, aplikasi ini dirancang untuk Anda. Di dalam buku ini, Anda akan mempelajari cara menggunakan aplikasi penting MS Office 2021, yaitu MS Word, MS Excel, dan MS PowerPoint. Lebih pentingnya lagi, buku ini bisa dibaca bagi pengguna MS Office 365 juga.\r\n\r\nBuku ini hadir di tengah masyarakat untuk mengupas MS Office 2021 secara lengkap, mencakup teknik-teknik yang paling dibutuhkan untuk membuat dokumen baru, mendesain slide presentasi, melakukan presentasi, perancangan animasi, menggunakan formula, mempresentasikan data dalam bentuk tabel, chart, maupun pivottable serta pivotchart, serta untuk menyelesaikan tugas-tugas dan pekerjaan sehari-hari.\r\n\r\nIsi buku ini dirancang memiliki ketebalan ekstra supaya dapat menjadi pusat pengetahuan dan informasi tentang MS Office 2021. Jadi kapan pun Anda merasa kesulitan menemukan fitur untuk MS Word, MS PowerPoint, dan MS Excel, diharapkan dapat menemukan jawabannya di dalam buku ini.</span><br></p>', 'A2', '63aef979b3e39.jpg', '2022-12-30 21:45:13', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_kategori`
+--
+
+CREATE TABLE `tb_kategori` (
+  `id_kategori` int(11) NOT NULL,
+  `name_kategori` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `update_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tb_kategori`
+--
+
+INSERT INTO `tb_kategori` (`id_kategori`, `name_kategori`, `created_at`, `update_at`) VALUES
+(1, 'Seni & Desain', '2022-12-30 21:09:16', NULL),
+(2, 'Komputer  & Teknologiiu', '2022-12-30 21:09:28', NULL),
+(3, 'Sejarah', '2022-12-30 21:09:41', '2022-12-30 21:09:54'),
+(4, 'Komik', '2022-12-30 21:09:48', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_peminjaman`
+--
+
+CREATE TABLE `tb_peminjaman` (
+  `id_peminjaman` int(11) NOT NULL,
+  `code_peminjaman` varchar(255) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `tgl_peminjaman` date DEFAULT NULL,
+  `tgl_sampai` date DEFAULT NULL,
+  `tgl_kembali` date DEFAULT NULL,
+  `telat` int(11) DEFAULT NULL,
+  `denda` varchar(255) DEFAULT NULL,
+  `status_id` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `update_at` datetime DEFAULT NULL,
+  `is_deleted` int(11) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tb_peminjaman`
+--
+
+INSERT INTO `tb_peminjaman` (`id_peminjaman`, `code_peminjaman`, `user_id`, `tgl_peminjaman`, `tgl_sampai`, `tgl_kembali`, `telat`, `denda`, `status_id`, `created_at`, `update_at`, `is_deleted`) VALUES
+(2, '30122L', 2, '2022-12-28', NULL, NULL, NULL, NULL, 5, '2022-12-30 22:44:29', NULL, 1),
+(3, '3012NP', 2, '2022-12-22', '2022-12-28', '2022-12-30', 2, '2000', 4, '2022-12-30 22:45:29', '2022-12-30 23:07:05', 0),
+(4, '3012HP', 3, '2022-12-31', '2023-01-07', NULL, NULL, NULL, 2, '2022-12-30 22:58:37', '2022-12-30 23:07:58', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_peminjaman_buku`
+--
+
+CREATE TABLE `tb_peminjaman_buku` (
+  `id_peminjaman_buku` int(11) NOT NULL,
+  `peminjaman_id` int(11) DEFAULT NULL,
+  `buku_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tb_peminjaman_buku`
+--
+
+INSERT INTO `tb_peminjaman_buku` (`id_peminjaman_buku`, `peminjaman_id`, `buku_id`) VALUES
+(1, 1, 20),
+(2, 1, 18),
+(3, 2, 17),
+(4, 3, 14),
+(5, 4, 17),
+(6, 4, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_status`
+--
+
+CREATE TABLE `tb_status` (
+  `id_status` int(11) NOT NULL,
+  `status_name` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `update_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tb_status`
+--
+
+INSERT INTO `tb_status` (`id_status`, `status_name`, `created_at`, `update_at`) VALUES
+(1, 'Menunggu Pengambilan', '2022-12-15 21:01:29', '2022-12-30 23:00:51'),
+(2, 'Dalam Peminjaman', '2022-12-15 21:01:33', NULL),
+(3, 'Telat Dikembalikan', '2022-12-15 21:01:36', NULL),
+(4, 'Dikembalikan', '2022-12-15 21:01:38', '2022-12-16 00:24:44'),
+(5, 'Expired', '2022-12-17 13:27:54', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_users`
+--
+
+CREATE TABLE `tb_users` (
+  `id_user` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `nis` varchar(255) DEFAULT NULL,
+  `jk` varchar(100) DEFAULT NULL,
+  `tgl_lahir` date DEFAULT NULL,
+  `no_hp` varchar(255) DEFAULT NULL,
+  `alamat` text DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `level` varchar(100) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `update_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tb_users`
+--
+
+INSERT INTO `tb_users` (`id_user`, `name`, `username`, `nis`, `jk`, `tgl_lahir`, `no_hp`, `alamat`, `password`, `level`, `created_at`, `update_at`) VALUES
+(1, 'Super Admin', 'super', '0000', 'Laki-laki', '2012-02-08', '00000000000', 'x', '5f4dcc3b5aa765d61d8327deb882cf99', 'super_admin', '2022-12-30 21:08:28', NULL),
+(2, 'tester user1', 'user1', '12345', 'Laki-laki', '2022-11-29', '082316327', 'jkt', '24c9e15e52afc47c225b757e7bee1f9d', 'admin', '2022-12-30 22:35:09', NULL),
+(3, 'tester user2', 'user2', '54321', 'Perempuan', '2022-12-29', '1238719731', 'jakarta', '5f4dcc3b5aa765d61d8327deb882cf99', 'user', '2022-12-30 22:54:47', NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tb_buku`
+--
+ALTER TABLE `tb_buku`
+  ADD PRIMARY KEY (`id_buku`);
+
+--
+-- Indexes for table `tb_kategori`
+--
+ALTER TABLE `tb_kategori`
+  ADD PRIMARY KEY (`id_kategori`);
+
+--
+-- Indexes for table `tb_peminjaman`
+--
+ALTER TABLE `tb_peminjaman`
+  ADD PRIMARY KEY (`id_peminjaman`);
+
+--
+-- Indexes for table `tb_peminjaman_buku`
+--
+ALTER TABLE `tb_peminjaman_buku`
+  ADD PRIMARY KEY (`id_peminjaman_buku`);
+
+--
+-- Indexes for table `tb_status`
+--
+ALTER TABLE `tb_status`
+  ADD PRIMARY KEY (`id_status`);
+
+--
+-- Indexes for table `tb_users`
+--
+ALTER TABLE `tb_users`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tb_buku`
+--
+ALTER TABLE `tb_buku`
+  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `tb_kategori`
+--
+ALTER TABLE `tb_kategori`
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tb_peminjaman`
+--
+ALTER TABLE `tb_peminjaman`
+  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tb_peminjaman_buku`
+--
+ALTER TABLE `tb_peminjaman_buku`
+  MODIFY `id_peminjaman_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `tb_status`
+--
+ALTER TABLE `tb_status`
+  MODIFY `id_status` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tb_users`
+--
+ALTER TABLE `tb_users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
